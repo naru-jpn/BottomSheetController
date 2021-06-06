@@ -1,8 +1,17 @@
 <p align='center'><b>BottomSheetController</b></p>
 
-<p align='center'>Component containing supplementary content that are anchored to the bottom of the screen.</p>
+<p align='center'>UIKit component containing supplementary content that are anchored to the bottom of the screen.</p>
 
 <p align='center'><kbd><img src="https://github.com/naru-jpn/BottomSheetController/blob/main/demo.gif" width="150"></kbd></p>
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [Swift Package Manager](#swift-package-manager)
+- [Usage](#usage)
+  - [Embed Your Contents](#embed-your-contents)
+    - [Embed your custom view controller](#embed-your-custom-view-controller)
+    - [Embed your custom view](#embed-your-custom-view)
+- [License](#license)
 
 ## Requirements
 
