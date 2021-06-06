@@ -53,7 +53,7 @@ public class BottomSheetController: UIViewController {
     private let contentView: UIView
     private let contentViewController: UIViewController?
 
-    /// Create new bottom sheeet.
+    /// Create new bottom sheet.
     ///
     /// Size of contentViewController's view must be fixed or decided by contents contained itself.
     ///
@@ -67,7 +67,7 @@ public class BottomSheetController: UIViewController {
         modalTransitionStyle = .crossDissolve
     }
 
-    /// Create new bottom sheeet.
+    /// Create new bottom sheet.
     ///
     /// Size of contentView must be fixed or decided by contents contained itself.
     ///
