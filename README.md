@@ -21,7 +21,9 @@ You can embed your custom ViewController or View as supplementary content.
 
 _View of ViewController or View must be decided height by content contained itself._
 
-### Embed Custom ViewController
+### Embed Your Contents
+
+#### Embed your custom view controller
 
 ```swift
 let yourCustomViewController = ...
@@ -29,7 +31,7 @@ let bottomSheetController = BottomSheetController(contentViewController: yourCus
 present(bottomSheetController, animated: true)
 ```
 
-### Embed Custom View
+#### Embed your custom view
 
 ```swift
 let yourCustomView = ...
