@@ -28,7 +28,7 @@ Add package repository with URL `https://github.com/naru-jpn/BottomSheetControll
 
 You can embed your custom ViewController or View as supplementary content.
 
-_View of ViewController or View must be decided height by content contained itself._
+_View of ViewController or View must be decided frame height by content contained itself._
 
 ### Embed Your Contents
 
