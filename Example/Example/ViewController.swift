@@ -20,7 +20,6 @@ class ViewController: UIViewController {
             return
         }
         let bottomSheetController = BottomSheetController(contentViewController: viewController)
-        bottomSheetController.backgroundColor = .init(white: 0, alpha: 0.5)
         present(bottomSheetController, animated: true)
     }
 

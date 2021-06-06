@@ -35,7 +35,7 @@ public class BottomSheetController: UIViewController {
     @IBOutlet private var position: NSLayoutConstraint!
 
     /// Background color of sheet's background.
-    public var backgroundColor: UIColor = .init(white: 0, alpha: 0.8) {
+    public var backgroundColor: UIColor = .init(white: 0, alpha: 0.5) {
         didSet {
             updateBackgroundColor()
         }
