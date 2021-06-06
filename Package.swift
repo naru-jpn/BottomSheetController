@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "BottomSheetController",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v11)
     ],
     products: [
         .library(
