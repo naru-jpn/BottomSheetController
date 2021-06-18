@@ -107,9 +107,9 @@ public class BottomSheetController: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sheetHeight = sheet.frame.height
-        close(animated: false)
+        closeSheet(animated: false)
         DispatchQueue.main.async {
-            self.open(animated: true)
+            self.openSheet(animated: true)
         }
     }
 
@@ -119,9 +119,9 @@ public class BottomSheetController: UIViewController {
     }
 
     /// Close sheet programmatically.
-    func complete() {
+    func close(completion: (() -> Void)? = nil) {
         sheetHeight = sheet.frame.height
-        close(animated: true) { _ in
+        closeSheet(animated: true) { _ in
             self.dismiss(animated: true)
         }
     }
@@ -149,7 +149,7 @@ public class BottomSheetController: UIViewController {
         bottomFiller.backgroundColor = contentBackgroundColor
     }
 
-    private func open(animated: Bool) {
+    private func openSheet(animated: Bool) {
         if animated {
             position.constant = 0
             UIView.animate(
@@ -170,7 +170,7 @@ public class BottomSheetController: UIViewController {
         }
     }
 
-    private func close(animated: Bool, completion: ((Bool) -> ())? = nil) {
+    private func closeSheet(animated: Bool, completion: ((Bool) -> ())? = nil) {
         if animated {
             position.constant = -sheetHeight
             UIView.animate(
@@ -211,11 +211,11 @@ public class BottomSheetController: UIViewController {
         case .ended:
             let velocity = gestureRecognizer.velocity(in: view).y
             if velocity > thresholdVelocityToClose || transition < -(sheetHeight * 0.5) {
-                close(animated: true) { _ in
+                closeSheet(animated: true) { _ in
                     self.dismiss(animated: true)
                 }
             } else {
-                open(animated: true)
+                openSheet(animated: true)
             }
             transition = 0
             gestureRecognizer.setTranslation(.zero, in: view)
@@ -225,6 +225,6 @@ public class BottomSheetController: UIViewController {
     }
 
     @IBAction private func didTapBackground(_ gestureRecognizer: UITapGestureRecognizer) {
-        complete()
+        close()
     }
 }
